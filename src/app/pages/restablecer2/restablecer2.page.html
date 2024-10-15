@@ -1,0 +1,33 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Restablecer Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="titulo">
+  <h1>Restablecer Contraseña</h1>
+  </div>
+  <div class="formulario">
+    <h4>Introduce tu nombre de usuario:</h4>
+      <ion-item>
+        <ion-input [(ngModel)]="usuario" label="Nombre de Usuario" 
+        label-placement="floating" 
+        fill="outline" 
+        placeholder="Introduce tu nombre de usuario:"></ion-input>
+      </ion-item>
+      <h4>Introduce tu nueva contraseña:</h4>
+      <ion-item>
+        <ion-input [(ngModel)]="nuevaContrasenna" label="Nueva Contraseña" 
+        label-placement="floating" 
+        fill="outline" 
+        placeholder="Introduce tu nueva contrasena:"></ion-input>
+      </ion-item>
+      <ion-button (click)="restablecer()">Restablecer</ion-button>
+  </div>
+</ion-content>

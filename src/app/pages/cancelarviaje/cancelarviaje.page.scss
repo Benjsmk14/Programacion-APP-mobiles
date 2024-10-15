@@ -1,0 +1,103 @@
+ion-toolbar {
+  --background: #083d85; 
+  --color: #fff; 
+  }
+ion-toolbar ion-buttons{
+  width: 7px;
+}
+ion-title {
+  text-align: center;
+  flex-direction: column; // Alinea los elementos en columna
+  justify-content: center;
+}
+ion-list {
+  --background-color: #4e74a7; 
+}
+
+ion-content {
+  --background: #083d85; 
+  --color: #ffffff; 
+}
+
+ion-item {
+  --background: #4e74a7; 
+  --color: #ffffff; 
+}
+
+ion-item ion-label {
+  color: #ffffff; 
+}
+
+ion-item ion-label h2,
+ion-item ion-label p {
+  color: #ffffff; 
+}
+.avatar-container {
+  position: relative; /* Hace que el contenedor sea relativo */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+.id-label {
+  position: absolute; /* Permite que se posicione encima del avatar */
+  top: -40px; /* Ajusta la posición hacia arriba según sea necesario */
+  left: 13px; /* Ajusta la posición hacia la izquierda según sea necesario */
+  color: #ffffff; /* Color del texto */
+  font-weight: bold; /* Estilo en negrita */
+  font-size: 20px; /* Ajusta el tamaño de la fuente */
+  z-index: 2; /* Asegura que se muestre por encima del avatar */
+}
+
+.avatar-circle {
+  width: 50px; /* Ajusta el tamaño según necesites */
+  height: 50px; /* Mantén el mismo ancho y alto para asegurar el círculo */
+  border-radius: 50%; /* Esto crea el borde circular */
+  border: 2px solid #fff; /* Borde alrededor del avatar (puedes cambiar el color y grosor) */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra el texto dentro del círculo */
+  margin-right: 30px;
+  p {
+    margin: 0; /* Elimina el margen por defecto del <p> */
+    color: #edb232; /* Color del texto (puedes cambiarlo si lo deseas) */
+    font-weight: bold; /* Estilo en negrita para el texto */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+  }
+}
+.titulo{
+  margin-top: 10%;
+}
+.titulo h1{
+  color: #edb232;
+
+  font-weight: 700; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px
+}
+.titulo h2{
+  color: aliceblue;
+
+  font-weight: 700; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px
+}
+
+ion-list{
+  background-color: #4e74a7;
+  margin-top: 20%;
+}
+ion-button{
+  height: 35px;
+  width: 80px;
+}

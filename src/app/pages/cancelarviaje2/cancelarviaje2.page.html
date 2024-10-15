@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cancelar Viaje</ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="titulo">
+    <h1>ANULA</h1>
+    <h2>TU VIAJE</h2>
+  </div>
+  <div class='container'>
+    <ion-list>
+      <ion-item *ngFor="let viaje of viajes">
+        <ion-avatar slot="start" class="avatar-circle">
+          <p>ID</p> <!-- Puedes considerar mostrar el ID real aquí si lo tienes -->
+        </ion-avatar>
+        <ion-label>
+          <h1>Destino: {{ viaje.destino }}</h1>
+          <p>Capacidad: {{ viaje.capacidad }} personas</p>
+          <p>Precio: {{ viaje.precio | number:'1.0-0' }} CLP</p>
+          <p>Hora de Salida: {{ viaje.hora }}</p>
+          <p>Lugar de Encuentro: {{ viaje.encuentro }}</p>
+          <p>Estado: {{ viaje.estado }}</p>
+        </ion-label>
+        <ion-button color="danger" (click)="anularViaje(viaje)">Anular</ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
