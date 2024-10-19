@@ -15,6 +15,7 @@
     </div>
 
     <div class="formulario">
+<<<<<<< HEAD
       <form (ngSubmit)="registrar()">
         <ion-item>
           <ion-input [(ngModel)]="nuevo_Usuario.nombreUsuario" 
@@ -77,6 +78,30 @@
           <ion-button expand="full" type="submit">Registrarse</ion-button>
         </ion-item>
       </form>
+=======
+      <ion-item>
+        <ion-input [(ngModel)]="nuevoUsuario" 
+          label="Nombre de Usuario" 
+          label-placement="floating" 
+          fill="outline" 
+          placeholder="Ingrese su nombre de usuario">
+        </ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input [(ngModel)]="nuevaContrasena" 
+          label="Contraseña" 
+          label-placement="floating" 
+          fill="outline" 
+          type="password"
+          placeholder="Ingrese su contraseña">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-button (click)="registrar()">Registrarse</ion-button>
+      </ion-item>
+>>>>>>> 3ca3e64ead575a44cba624c47fc0918a697a1dc7
     </div>
   </div>
 </ion-content>

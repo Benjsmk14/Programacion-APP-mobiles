@@ -16,8 +16,12 @@ export class ProgramarViajePage implements OnInit {
   nuevo_Viajes: Viajes = {destino:'',capacidad: null,precio: null,hora:'',encuentro:''}
 
 
+<<<<<<< HEAD
   ngOnInit() { 
   }
+=======
+  ngOnInit() { }
+>>>>>>> 3ca3e64ead575a44cba624c47fc0918a697a1dc7
 
   grabar(){    // Validación antes de enviar
     if (!this.nuevo_Viajes.destino||

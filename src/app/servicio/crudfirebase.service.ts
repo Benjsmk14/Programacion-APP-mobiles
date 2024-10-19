@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth'; 
@@ -21,11 +22,17 @@ export interface Viajes {
   hora: string;
   encuentro: string;
 }
+=======
+//librerias
+import { Observable, Timestamp } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/compat/firestore'
+>>>>>>> 3ca3e64ead575a44cba624c47fc0918a697a1dc7
 
 @Injectable({
   providedIn: 'root'
 })
 export class CrudfirebaseService {
+<<<<<<< HEAD
   constructor(private firestore: AngularFirestore, private auth: AngularFireAuth) {}
 
   crearUsuario(usuario: Usuario) {
@@ -62,4 +69,28 @@ export class CrudfirebaseService {
   eliminarViajes(id: any) {
     return this.firestore.collection('Viajes').doc(id).delete();
   }
+=======
+
+  constructor(private firestore:AngularFirestore) {}
+
+    crearViajes(Viajes : Viajes){
+      return this.firestore.collection('Viajes').add(Viajes)
+   }
+   obtenerViajes(): Observable<Viajes[]> {
+    return this.firestore.collection<Viajes>('Viajes').valueChanges({idField:'id'});
+  }
+  eliminarViajes(id: any) {
+    return this.firestore.collection('Viajes').doc(id).delete();
+  }
+} 
+
+//crear un modelo de la coleccio
+export interface Viajes{
+  id?:string;
+  destino:string;
+  capacidad: number | null;
+  precio: number | null;
+  hora:string;
+  encuentro:string;
+>>>>>>> 3ca3e64ead575a44cba624c47fc0918a697a1dc7
 }
