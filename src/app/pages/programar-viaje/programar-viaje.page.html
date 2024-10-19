@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Programar Viaje</ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="titulo">
+  <h1>PROGRAMA</h1>
+  <h2>TU VIAJE</h2>
+  </div>
+  <div class="container">
+    <ion-item>
+      <ion-input placeholder="Ingrese el destino del viaje" [(ngModel)]="nuevo_Viajes.destino"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Ingrese la capacidad de su vehículo" [(ngModel)]="nuevo_Viajes.capacidad" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Ingrese el precio del viaje" [(ngModel)]="nuevo_Viajes.precio" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Ingrese hora de salida del viaje" [(ngModel)]="nuevo_Viajes.hora" type="time"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Ingrese el Lugar de Encuentro" [(ngModel)]="nuevo_Viajes.encuentro"></ion-input>
+    </ion-item>
+    <ion-button (click)="grabar()" expand="block">Programar Viaje</ion-button>
+  </div>
+</ion-content>
